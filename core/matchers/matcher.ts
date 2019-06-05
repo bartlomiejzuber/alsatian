@@ -124,7 +124,7 @@ export class Matcher<T> {
     // if one object is an array and the other is not then they are not equal
     if (Array.isArray(objectA) !== Array.isArray(objectB)) {
       return false;
-    } else if (typeof objectA === "object") {
+    } else if (typeof objectA === "object" && typeof objectB === "object") {
       // get all the property keys for each object
       const OBJECT_A_KEYS = Object.keys(objectA);
       const OBJECT_B_KEYS = Object.keys(objectB);
